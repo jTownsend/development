@@ -1,0 +1,56 @@
+app.config:
+    charset:       UTF-8
+    error_handler: LichessBundle:Main:exception
+    csrf_protection:
+        enabled: true
+        secret: xxxxxxxxxx
+    router:        { resource: "%kernel.root_dir%/config/routing.yml" }
+    validation:    { enabled: true, annotations: true }
+    templating:    { engines: ['twig'] } #assets_version: SomeVersionScheme
+    session:
+        default_locale: en
+        lifetime:       3600
+        auto_start:     true
+
+# Twig Configuration
+twig.config:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
+doctrine_odm.mongodb:
+    auto_generate_proxy_classes: false
+    auto_generate_hydrator_classes: false
+    default_database: funsational_development
+    #cache_driver: apc
+    mappings:
+        SimpleBlogBundle: ~
+    connections:
+        default:
+            options:
+                connect: true
+                persist: funsational_development
+                    
+simple_blog.config:
+    db_driver: odm
+
+#base_application.config: ~ 
+
+## Doctrine Configuration
+#doctrine.dbal:
+#    dbname:   xxxxxxxx
+#    user:     xxxxxxxx
+#    password: ~
+#    logging:  %kernel.debug%
+#doctrine.orm:
+#    auto_generate_proxy_classes: %kernel.debug%
+#    mappings:
+#        HelloBundle: ~
+
+## Swiftmailer Configuration
+#swiftmailer.config:
+#    transport:  smtp
+#    encryption: ssl
+#    auth_mode:  login
+#    host:       smtp.gmail.com
+#    username:   xxxxxxxx
+#    password:   xxxxxxxx
