@@ -1,0 +1,30 @@
+[submodule "src/Sonata/BaseApplicationBundle"]
+	path = src/Sonata/BaseApplicationBundle
+	url = git@github.com:Funsational/BaseApplicationBundle.git
+[submodule "src/Sonata/jQueryBundle"]
+	path = src/Sonata/jQueryBundle
+	url = git@github.com:sonata-project/jQueryBundle.git
+[submodule "src/Sonata/BluePrintBundle"]
+	path = src/Sonata/BluePrintBundle
+	url = git@github.com:sonata-project/BluePrintBundle.git
+[submodule "src/Knplabs/MenuBundle"]
+	path = src/Knplabs/MenuBundle
+	url = git@github.com:sonata-project/MenuBundle.git
+[submodule "vendor/symfony"]
+	path = vendor/symfony
+	url = git://github.com/fabpot/symfony.git
+[submodule "vendor/mongodb-odm"]
+	path = vendor/mongodb-odm
+	url = git://github.com/doctrine/mongodb-odm
+[submodule "vendor/zend"]
+	path = vendor/zend
+	url = git://github.com/zendframework/zf2.git
+[submodule "vendor/ZendPaginatorAdapter"]
+	path = vendor/ZendPaginatorAdapter
+	url = git://github.com/ornicar/ZendPaginatorAdapter.git
+[submodule "vendor/twig"]
+	path = vendor/twig
+	url = git://github.com/fabpot/Twig.git
+[submodule "src/Funsational/SimpleBlogBundle"]
+	path = src/Funsational/SimpleBlogBundle
+	url = git@github.com:Funsational/SimpleBlogBundle.git
