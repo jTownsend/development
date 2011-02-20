@@ -1,4 +1,4 @@
-app.config:
+framework:
     charset:       UTF-8
     error_handler: LichessBundle:Main:exception
     csrf_protection:
@@ -13,39 +13,81 @@ app.config:
         auto_start:     true
 
 # Twig Configuration
-twig.config:
+twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+                    
+simple_blog:
+    db_driver: odm
 
-doctrine_odm.mongodb:
+#sonata_base_application:
+#    entities:
+#        user:
+#            label:      User
+#            group:      users
+#            class:      FOS\UserBundle\Admin\Entity\UserAdmin
+#            entity:     Funsational\SimpleBlogBundle\Entity\User
+#            controller: FOS\UserBundle\Controller\UserAdminController
+
+#security:
+#    firewalls:
+#       public:
+#            pattern: .*
+#            form_login:
+#                provider:                       fos_user
+#                login_path:                     /login
+#                use_forward:                    false
+#                check_path:                     /login-check
+#                failure_path:                   null
+#            logout: true
+#            anonymous: true
+#    access_control:
+#        - { path: "/inbox.*", role: IS_AUTHENTICATED_FULLY }
+#        - { path: "/.*", role: IS_AUTHENTICATED_ANONYMOUSLY }
+                    
+#fos_user:
+#    db_driver: orm
+#    provider_key: fos_user
+#    encoder:
+#        iterations: 1
+#    class:
+#        model:
+#            user: Funsational\SimpleBlogBundle\Entity\User
+#            group: FOS\UserBundle\Entity\Group      
+
+
+## Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        dbname:   funsational_%kernel.environment%
+        user:     root
+        password: root
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_generate_proxy_classes: true
+        proxy_namespace: Proxies
+        proxy_dir: %kernel.cache_dir%/doctrine/orm/Proxies
+        default_entity_manager: default
+        default_connection: default
+        metadata_cache_driver: array
+        query_cache_driver: array
+        result_cache_driver: array
+        mappings:
+            SimpleBlogBundle: ~
+
+doctrine_mongo_db:
     auto_generate_proxy_classes: false
     auto_generate_hydrator_classes: false
-    default_database: funsational_development
-    #cache_driver: apc
+    default_database: funsational_%kernel.environment%
+    cache_driver: apc
     mappings:
         SimpleBlogBundle: ~
     connections:
         default:
-            options:
-                connect: true
-                persist: funsational_development
-                    
-simple_blog.config:
-    db_driver: odm
-
-#base_application.config: ~ 
-
-## Doctrine Configuration
-#doctrine.dbal:
-#    dbname:   xxxxxxxx
-#    user:     xxxxxxxx
-#    password: ~
-#    logging:  %kernel.debug%
-#doctrine.orm:
-#    auto_generate_proxy_classes: %kernel.debug%
-#    mappings:
-#        HelloBundle: ~
-
+    options:
+        connect: true
+                       
 ## Swiftmailer Configuration
 #swiftmailer.config:
 #    transport:  smtp

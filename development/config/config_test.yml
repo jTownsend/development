@@ -11,13 +11,3 @@ app.config:
 zend.config:
     logger:
         priority: debug
-
-doctrine_odm.mongodb:
-    metadata_cache_driver: array
-    cache_driver: array
-    default_database: funsational_development_test
-    connections:
-        default:
-            options:
-                connect: true
-                persistent: lichess

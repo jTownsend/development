@@ -9,15 +9,16 @@ class DevelopmentKernel extends Kernel
     {
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
 
             // enable third-party bundles
             new Symfony\Bundle\ZendBundle\ZendBundle(),
-//            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
-//            new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
-            //new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
 
+//            new FOS\UserBundle\FOSUserBundle(),
 //            new Sonata\BaseApplicationBundle\SonataBaseApplicationBundle(),
             
             // register your bundles
@@ -40,12 +41,6 @@ class DevelopmentKernel extends Kernel
     {
         // use YAML for configuration
         // comment to use another configuration format
-        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
-
-        // uncomment to use XML for configuration
-        //$loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.xml');
-
-        // uncomment to use PHP for configuration
-        //$loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.php');
+        $loader->load(__DIR__.'/config/config_' . $this->getEnvironment() . '.yml');
     }
 }

@@ -1,28 +1,27 @@
 imports:
     - { resource: config.yml }
 
-app.config:
+framework:
     router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
-    profiler: { only_exceptions: true }
-    debug: true
+    profiler: { only_exceptions: false }
 
-doctrine_odm.mongodb:
-    default_database: funsational_development_dev
-    connections:
-        default:
-            options:
-                connect: true
-                persist: funsational_development_dev
+#doctrine_odm.mongodb:
+#    default_database: funsational_development_dev
+#    connections:
+#        default:
+#            options:
+#                connect: true
+#                persist: funsational_development_dev
 
-twig.config:
+twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
                               
-webprofiler.config:
+web_profiler:
     toolbar: true
     intercept_redirects: true
 
-zend.config:
+zend:
     logger:
         priority: debug
         path:     %kernel.logs_dir%/%kernel.environment%.log

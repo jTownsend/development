@@ -1,7 +1,20 @@
-homepage:
-    pattern:  /
-    defaults: { _controller: FrameworkBundle:Default:index }
+_security_login:
+    pattern: /login
+    defaults: { _controller: SecurityBundle:Security:login }
+
+_security_check:
+    pattern: /login_check
 
 blog:
-    resource: @SimpleBlogBundle/Resources/config/routing.xml
-    prefix: /blog
+   resource: @SimpleBlogBundle/Resources/config/routing.xml
+
+#admin:
+#    resource: @SonataBaseApplicationBundle/Resources/config/routing/sonata_base_application.xml
+#    prefix: /admin
+
+#_sonata_base_appliation:
+#    resource: .
+#    type: sonata_base_application
+
+    
+
