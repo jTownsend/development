@@ -1,6 +1,9 @@
 [submodule "src/Sonata/BaseApplicationBundle"]
 	path = src/Sonata/BaseApplicationBundle
 	url = git@github.com:Funsational/BaseApplicationBundle.git
+[submodule "src/Funsational/SimpleBlogBundle"]
+	path = src/Funsational/SimpleBlogBundle
+	url = git@github.com:Funsational/SimpleBlogBundle.git
 [submodule "src/Sonata/jQueryBundle"]
 	path = src/Sonata/jQueryBundle
 	url = git@github.com:sonata-project/jQueryBundle.git
