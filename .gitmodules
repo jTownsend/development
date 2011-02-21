@@ -52,3 +52,12 @@
 [submodule "vendor/zend-log/Zend/Log"]
 	path = vendor/zend-log/Zend/Log
 	url = git://github.com/symfony/zend-log.git
+[submodule "src/Sonata/jQueryBundle"]
+	path = src/Sonata/jQueryBundle
+	url = git@github.com:sonata-project/jQueryBundle.git
+[submodule "src/Sonata/BluePrintBundle"]
+	path = src/Sonata/BluePrintBundle
+	url = git@github.com:sonata-project/BluePrintBundle.git
+[submodule "src/Sonata/BaseApplicationBundle"]
+	path = src/Sonata/BaseApplicationBundle
+	url = git@github.com:Funsational/SimpleBlogBundle.git
