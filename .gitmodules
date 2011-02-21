@@ -61,3 +61,6 @@
 [submodule "src/Sonata/BaseApplicationBundle"]
 	path = src/Sonata/BaseApplicationBundle
 	url = git@github.com:Funsational/BaseApplicationBundle.git
+[submodule "src/Knplabs/MenuBundle"]
+	path = src/Knplabs/MenuBundle
+	url = git@github.com:sonata-project/MenuBundle.git
