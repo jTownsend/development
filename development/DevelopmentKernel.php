@@ -20,6 +20,7 @@ class DevelopmentKernel extends Kernel
 
 //            new FOS\UserBundle\FOSUserBundle(),
             new Sonata\BaseApplicationBundle\SonataBaseApplicationBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\BluePrintBundle\SonataBluePrintBundle(),
             
             // register your bundles
@@ -41,7 +42,6 @@ class DevelopmentKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         // use YAML for configuration
-        // comment to use another configuration format
         $loader->load(__DIR__.'/config/config_' . $this->getEnvironment() . '.yml');
     }
 }
