@@ -11,12 +11,13 @@ $loader->registerNamespaces(array(
     'FOS'                            => __DIR__.'/../src',
     'Symfony'                        => __DIR__.'/../vendor/symfony/src',
     'Doctrine\\Common\\DataFixtures' => __DIR__.'/../vendor/doctrine-data-fixtures/lib',
-    'Doctrine\\Common'               => __DIR__.'/../vendor/mongodb-odm/lib/vendor/doctrine-common/lib',
-    'Doctrine\\MongoDB'              => __DIR__.'/../vendor/mongodb-odm/lib/vendor/doctrine-mongodb/lib',
-    'Doctrine\\ODM\\MongoDB'         => __DIR__.'/../vendor/mongodb-odm/lib',
+    'Doctrine\\Common'               => __DIR__.'/../vendor/doctrine-common/lib',
+    'Doctrine\\DBAL\\Migrations'     => __DIR__.'/../vendor/doctrine-migrations/lib',
+    'Doctrine\\MongoDB'              => __DIR__.'/../vendor/doctrine-mongodb/lib',
+    'Doctrine\\ODM\\MongoDB'         => __DIR__.'/../vendor/doctrine-mongodb-odm/lib',
     'Doctrine\\DBAL'                 => __DIR__.'/../vendor/doctrine-dbal/lib',
-    'Doctrine\\ORM'                  => __DIR__.'/../vendor/doctrine/lib',
-    'Zend'                           => __DIR__.'/../vendor/zend/library',
+    'Doctrine'                       => __DIR__.'/../vendor/doctrine/lib',
+    'Zend\\Log'                      => __DIR__.'/../vendor/zend-log',
 ));
 
 $loader->registerPrefixes(array(

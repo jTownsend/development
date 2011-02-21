@@ -19,7 +19,8 @@ class DevelopmentKernel extends Kernel
             new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
 
 //            new FOS\UserBundle\FOSUserBundle(),
-//            new Sonata\BaseApplicationBundle\SonataBaseApplicationBundle(),
+            new Sonata\BaseApplicationBundle\SonataBaseApplicationBundle(),
+            new Sonata\BluePrintBundle\SonataBluePrintBundle(),
             
             // register your bundles
             new Funsational\SimpleBlogBundle\SimpleBlogBundle(),

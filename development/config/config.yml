@@ -20,14 +20,14 @@ twig:
 simple_blog:
     db_driver: odm
 
-#sonata_base_application:
-#    entities:
-#        user:
-#            label:      User
-#            group:      users
-#            class:      FOS\UserBundle\Admin\Entity\UserAdmin
-#            entity:     Funsational\SimpleBlogBundle\Entity\User
-#            controller: FOS\UserBundle\Controller\UserAdminController
+sonata_base_application:
+    entities:
+        user:
+            label:      User
+            group:      users
+            class:      Funsational\SimpleBlogBundle\Admin\Entity\UserAdmin
+            entity:     Funsational\SimpleBlogBundle\Entity\User
+            controller: Funsational\SimpleBlogBundle\Controller\UserAdminController
 
 #security:
 #    firewalls:
