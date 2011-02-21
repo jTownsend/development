@@ -58,6 +58,3 @@
 [submodule "src/Sonata/BluePrintBundle"]
 	path = src/Sonata/BluePrintBundle
 	url = git@github.com:sonata-project/BluePrintBundle.git
-[submodule "src/Sonata/BaseApplicationBundle"]
-	path = src/Sonata/BaseApplicationBundle
-	url = git@github.com:Funsational/SimpleBlogBundle.git
